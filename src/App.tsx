@@ -31,7 +31,7 @@ const TodoForm = ({ addTodoItem }: { addTodoItem: (text: string) => void }) => {
 
     addTodoItem(value);
     setValue('');
-    console.log('willy');
+    console.log('test');
   }
 
   return (
