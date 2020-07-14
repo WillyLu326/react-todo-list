@@ -47,6 +47,18 @@ const TodoForm = ({ addTodoItem }: { addTodoItem: (text: string) => void }) => {
 }
 
 const TodoItem = ({ todo, index, removeTodoItem, completeTodoItem }: { todo: ToDo, index: number, removeTodoItem: (e: React.MouseEvent<HTMLElement>, i: number) => void, completeTodoItem: (e: React.MouseEvent<HTMLElement>, i: number) => void }) => {
+  
+  useEffect(() => {
+    console.log('todo item start');
+    return () => {
+      console.log('todo item clean up');
+    };
+  }, []);
+
+// test 1
+// test 2
+// test 3
+  
   return (
     <div className="todo" onClick={(e) => completeTodoItem(e, index)}>
       <div className="todo-label">
